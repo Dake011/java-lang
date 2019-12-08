@@ -1,4 +1,4 @@
-Recursive Descent Parser Exercise
+#### Recursive Descent Parser Exercise
 
 This is the starter project for the recursive descent parser assignment.  You will have time during lab to complete this exercise.  
 
