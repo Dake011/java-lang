@@ -1,33 +1,6 @@
-# 361 Fall 2019, Homework 1
-
-This is a starter Java project for Homework 1.  The assignment has two problems: key word in context and a card game similar to rummy.  A description of each of the problems is given below.  
-
-Note that, in addition to this file, the project contains many hints and explanations in the form of javadoc comments.  You can use the command `mvn javadoc:javadoc` to compile the javadoc to HTML.  
-
 *Clone* this repository and import to your IDE to get started.  
 
-## Problem 1 Key Word in Context
-
-The goal of the Key Word in Context (KWIC) problem is to build a special kind of index for a document.  KWIC is often used as an example problem in software engineering.  Parnas treats this problem at length in the article ['On the criteria to be used in decomposing systems into modules'](https://dl.acm.org/citation.cfm?id=361623).  
-
-A KWIC index, also called a concordance, is an index to a document where the entries, listed alphabetically, also include some of the context (i.e. the words surrounding the entry).  This repository contains an example KWIC index for a short text document implemented as linked HTML files.  The example consists of three files.  
-
-- `frankensteinsample.txt`: the original document, a short sample from the novel Frankenstein by Mary Shelley (public domain)
-- `frankensteinsample.html`: an HTML version of the same text
-- `kwic-frankenstein.html`: KWIC index as an HTML file linked to `frankensteinsample.html` (Note: since the sample is short enough to fit on a single screen we won't see the effect of the named anchor links. These files are included to show how your program should format HTML output.  I have also made a larger KWIC example available on the moodle.)
-
-As shown in the example, your program should be able to read in a `.txt` document and produce two HTML files: an HTML version of the original text, and an HTML KWIC index that links into the previous file.  
-
-Create your main program by implementing the interface `KeywordInContext`.  The `TestKWIC` class gives 6 unit tests that your implementation should be able to pass.  However, your program will also be evaluated based on the HTML files it outputs.  Passing the unit tests alone is not sufficient.  
-
-Review the larger KWIC example on moodle to clarify what your program should do.  
-
-**Tasks for KWIC Problem**
-
-- Provide an implementation of the `KeywordInContext` interface that passes the unit tests in the class `TestKWIC`
-- Find a long text document (for example from Project Gutenberg) and use your program to create a KWIC index following the examples provided.  Submit your HTML files along with code.  Make sure to choose a document such that the index ends up no larger than 5 MB.   
-
-## Problem 2 PlayableRummy
+PlayableRummy
 
 `PlayableRummy` is an interface for the game logic of a variation of the popular card game "rummy". Together with the unit tests <code>TestRummyCode</code>, an implementation of this interface is meant to be an exercise in object-oriented development. An implementation of this type should provide a constructor with the signature <code>Rummy(String... players)</code> where the elements of <code>players</code> are the names of the players.
 
@@ -45,9 +18,4 @@ To have the current player declare rummy, call `declareRummy` during the MELD st
 
 [Description of the standard rules of rummy](https://bicyclecards.com/how-to-play/rummy-rum/).  Note that the game we are implementing is a variation of the standard rules.   
 
-**Tasks for Rummy Problem**
 
-- Before coding, read this description and other supporting materials and produce a *domain model* using the UML class diagram notation
-- Provide an implementation of the `PlayableRummy` interface such that all 30 unit tests in the class `TestRummyCode` pass
-- After implementation, sketch the programming classes as a UML class diagram and note differences with the domain model (it is ok to draw the diagrams by hand and submit a scan)
-- Submit a zip file of your project folder along with the domain model and class diagrams.  Also, describe how you followed any design patterns
